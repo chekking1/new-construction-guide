@@ -186,7 +186,17 @@
     color: var(--on-slate-soft);
     margin-bottom: 2.5rem;
   }
-  .board { border-top: 1px solid var(--on-slate-line); margin-bottom: 3rem; }
+  .board { border-top: 1px solid var(--on-slate-line); margin-bottom: 1.5rem; }
+  .rates .as-of { max-width: 36rem; }
+  .more { margin-bottom: 3rem; }
+  .more a {
+    font-family: var(--display);
+    font-weight: 500;
+    color: var(--white);
+    text-decoration-color: var(--gold);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
   .row {
     display: grid;
     grid-template-columns: minmax(9rem, 1fr) 12.5rem minmax(12rem, 1.3fr);
@@ -258,6 +268,38 @@
   }
   .areas ul { list-style: none; margin: 0; padding: 0; }
   .areas li { padding: 0.2rem 0; }
+
+  .section .intro { margin-bottom: 2rem; }
+  .compromise {
+    border-top: 1px solid var(--line);
+    padding-top: 2.5rem;
+    max-width: var(--measure);
+  }
+  .compromise h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .pick {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.375rem, 3.2vw, 1.75rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--gold);
+    margin: 1.25rem 0 1.5rem;
+  }
+  .tradeoffs {
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+  }
+  .tradeoffs li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .tradeoffs li:first-child { border-top: 1px solid var(--line); }
+  .tradeoffs strong { font-weight: 600; }
 
   /* Calculator placeholder */
   .calc {
@@ -420,8 +462,8 @@
 
   <section class="rates" aria-labelledby="rates-title">
     <div class="wrap">
-      <h2 id="rates-title">What builders are offering right now</h2>
-      <p class="as-of">As of September 23, 2026</p>
+      <h2 id="rates-title">A few examples of what builders are offering right now</h2>
+      <p class="as-of">As of September 23, 2026. These 3 are just examples. Plenty of other builders are running incentives too, more than I could list here.</p>
 
       <div class="board" role="list">
         <div class="row" role="listitem">
@@ -449,6 +491,7 @@
           <p class="alt">Or <strong>4.5% fixed</strong></p>
         </div>
       </div>
+      <p class="more"><a href="#builder-list">Send me your cities and I'll tell you what's available there</a></p>
 
       <div class="explain">
         <div>
@@ -461,18 +504,18 @@
         </div>
       </div>
 
-      <p class="disclaimer">Rates and incentives shown are as of September 23, 2026 and can change at any moment. Each builder sets its own terms, qualifications, and eligible homes. This is general information, not a loan offer.</p>
+      <p class="disclaimer">The builders, rates, and incentives shown are examples as of September 23, 2026 and can change at any moment. Each builder sets its own terms, qualifications, and eligible homes. This is general information, not a loan offer.</p>
     </div>
   </section>
 
   <section class="section" aria-labelledby="where">
     <div class="wrap">
-      <h2 id="where">Where I help buyers</h2>
+      <h2 id="where">Where builders are giving the best deals right now</h2>
+      <p class="intro">I help buyers anywhere in Utah County, but right now these are the areas I'd look at first.</p>
       <div class="areas">
         <div>
           <h3>Northern corridor</h3>
           <ul>
-            <li>Lehi</li>
             <li>Saratoga Springs</li>
             <li>Eagle Mountain</li>
           </ul>
@@ -487,8 +530,18 @@
           </ul>
         </div>
       </div>
-      <p>I cover communities from EdgeHomes, D.R. Horton, Lennar, Century Communities, Pulte, Magnus and Symphony Homes.</p>
-      <p>I also read builder contracts line by line. On a 124 page Lennar contract in Saratoga Springs, I flagged the financing risks and the terms that exposed the buyer.</p>
+
+      <div class="compromise">
+        <h3>Why most of these are on the outskirts</h3>
+        <p>Real estate has always followed what I call the law of compromise. There are 3 things every buyer wants:</p>
+        <p class="pick">Price. Floorplan. Location. Pick 2.</p>
+        <ul class="tradeoffs">
+          <li><strong>Best price and floorplan:</strong> you might compromise on location.</li>
+          <li><strong>Best floorplan and location:</strong> you might compromise on price.</li>
+          <li><strong>Best price and location:</strong> you might compromise on floorplan.</li>
+        </ul>
+        <p>New construction incentives soften that blow, but the rule still holds. Even with an incentive, the same house in Lehi is going to cost you far more than it would in Eagle Mountain.</p>
+      </div>
     </div>
   </section>
 
@@ -509,6 +562,7 @@
         <h2 id="about-title">Cameron Hekking</h2>
         <p class="broker">REALTOR® | The Perry Group | Real Broker, LLC</p>
         <p>I'm a Utah native and lifelong Utah County resident with a young family of my own, so I'm at the same stage of life as most of the buyers I help. I focus on new construction because it's the most affordable path for first time buyers here, and my favorite part of the job is making the process simple enough that clients end up as friends.</p>
+        <p>I cover communities from EdgeHomes, D.R. Horton, Lennar, Century Communities, Pulte, Magnus and Symphony Homes. I also read builder contracts line by line. On a 124 page Lennar contract in Saratoga Springs, I flagged the financing risks and the terms that exposed the buyer.</p>
         <p>Call or text <a class="phone" href="tel:+13852320980">385-232-0980</a></p>
       </div>
     </div>
